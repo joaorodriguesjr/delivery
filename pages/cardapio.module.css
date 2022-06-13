@@ -61,18 +61,21 @@
 
 .service .action {
   margin: 32px auto;
+  display: none;
 }
 
 .action {
   display: flex;
   align-items: center;
 
-  max-width: 170px;
+  width: fit-content;
   margin: 8px auto;
-  padding: 6px 10px;
-  border-radius: 8px;
-  font-size: 1.0rem;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.90rem;
   font-weight: 700;
+  letter-spacing: 0.10rem;
+  text-transform: uppercase;
 
   background-color: #BF4040;
   color: #FFFFFF;

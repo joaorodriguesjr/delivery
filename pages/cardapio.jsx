@@ -12,7 +12,7 @@ export default function DeliveryMenu() {
         <div className={module.separator}></div>
         <div className={module.header_content}>
           <h1>Cardápio</h1>
-          <a href="https://wa.me/5531991047243" target='_blank'>
+          <a href="https://wa.me/5531991047243" target='_blank' rel="noreferrer">
             <img src="/whatsapp.svg"/>
             <span>Agendar Pedido</span>
           </a>

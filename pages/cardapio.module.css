@@ -37,18 +37,38 @@
 
 .header h1 {
   margin: 0;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 300;
 
   text-transform: uppercase;
   letter-spacing: 0.25rem;
 }
 
-.header a {
+.service {
+  max-width: 350px;
+  margin: 32px auto;
+  text-align: center;
+}
+
+.service h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+.service .action {
+  margin: 32px auto;
+}
+
+.action {
   display: flex;
   align-items: center;
 
-  margin: 8px 0;
+  max-width: 170px;
+  margin: 8px auto;
   padding: 6px 10px;
   border-radius: 8px;
   font-size: 1.0rem;
@@ -58,6 +78,6 @@
   color: #FFFFFF;
 }
 
-.header a img {
+.action img {
   margin-right: 8px;
 }

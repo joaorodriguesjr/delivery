@@ -6,7 +6,7 @@ const nextConfig = {
       {
         source: '/',
         destination: '/cardapio',
-        permanent: true,
+        permanent: false,
       },
     ]
   },

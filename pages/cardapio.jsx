@@ -21,7 +21,9 @@ export default function DeliveryMenu() {
       </header>
       <aside className={module.service}>
         <h2>Atendimento</h2>
-        <p>Serviço aos sábados e domingos das 11:00 às 14:00. Pedidos de segunda à sexta.</p>
+        <p>
+          Serviço aos sábados e domingos das 11:00hs às 14:00hs. Pedidos de segunda à sexta-feira.
+        </p>
         <a className={module.action} href="https://wa.me/5531991047243" target='_blank' rel="noreferrer">
           <img src="/whatsapp.svg" width={16} height={16} alt="ícone do whatsapp"/>
           <span>Agendar Pedido</span>

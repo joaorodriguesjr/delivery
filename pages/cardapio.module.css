@@ -90,7 +90,7 @@
 
 .portion  h3 {
   margin: 4px 0;
-  font-size: 1.10rem;
+  font-size: 1.0rem;
 }
 
 .portion  p {
@@ -99,8 +99,8 @@
 
 .price {
   padding: 0 32px;
-  font-size: 1.35rem;
-  font-weight: 900;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: #BF4040;
 }
 

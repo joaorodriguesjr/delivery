@@ -121,7 +121,7 @@
 
 .service .action {
   margin: 32px auto;
-  display: block;
+  display: flex;
 }
 
 .action {

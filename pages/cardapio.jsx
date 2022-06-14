@@ -8,7 +8,7 @@ export default function DeliveryMenu() {
       <meta name="description" content="O seu almoço do fim de semana entregue na sua casa"/>
       <link rel="canonical" href="https://familia.delivery/cardapio"/>
     </Head>
-    <main className={module.container}>
+    <div className={module.container}>
       <header className={module.header}>
         <img src="/logo.svg" alt="logo Família Delivery" width={125} height={84}/>
         <div className={module.separator}></div>
@@ -30,6 +30,6 @@ export default function DeliveryMenu() {
           <span>Agendar Pedido</span>
         </a>
       </aside>
-    </main>
+    </div>
   </>
 }

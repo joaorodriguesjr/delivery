@@ -44,9 +44,69 @@
   letter-spacing: 0.25rem;
 }
 
+.items {
+  width: 100%;
+  margin: 16px 0;
+}
+
+.item {
+  width: 100%;
+  margin: 16px 0;
+}
+
+.recipe {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.recipe > h2 {
+  margin: 8px 0;
+  grid-column: 1 / span 2;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  text-align: center;
+}
+
+.picture {
+  grid-column: 1;
+}
+
+.recipe > p {
+  grid-column: 2;
+  padding: 0 8px;
+}
+
+.portions {
+  display: flex;
+  flex-direction: row;
+}
+
+.portion {
+  flex: 1;
+  padding: 0 8px;
+}
+
+.portion  h3 {
+  margin: 4px 0;
+  font-size: 1.10rem;
+}
+
+.portion  p {
+  margin: 4px 0;
+}
+
+.price {
+  padding: 0 32px;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #BF4040;
+}
+
 .service {
   max-width: 350px;
-  margin: 32px auto;
+  margin: 16px auto 0 auto;
   text-align: center;
 }
 
@@ -61,7 +121,7 @@
 
 .service .action {
   margin: 32px auto;
-  display: none;
+  display: block;
 }
 
 .action {

@@ -13,7 +13,7 @@ export default function DeliveryMenu() {
       <meta property="og:title" content="Cardápio - Família Delivery"/>
       <meta property="og:description" content="Seu almoço do fim de semana entregue na sua casa!"/>
       <meta property="og:url" content="https://familia.delivery/cardapio"/>
-      <meta property="og:image:secure_url" itemProp="image" content="https://familia.delivery/cardapio-link.png"/>
+      <meta property="og:image" itemProp="image" content="https://familia.delivery/cardapio-link.png"/>
     </Head>
     <div className={module.container}>
       <header className={module.header}>

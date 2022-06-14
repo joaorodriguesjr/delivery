@@ -6,7 +6,7 @@ export default function DeliveryMenu() {
     <Head>
       <title>Cardápio - Família Delivery</title>
       <meta name="description" content="O seu almoço do fim de semana entregue na sua casa"/>
-      <link rel="canonical" href="/cardapio"/>
+      <link rel="canonical" href="https://familia.delivery/cardapio"/>
     </Head>
     <main className={module.container}>
       <header className={module.header}>

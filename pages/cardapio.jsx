@@ -33,7 +33,7 @@ export default function DeliveryMenu() {
           <div className={module.recipe}>
             <h2>Feijão Tropeiro</h2>
             <div className={module.picture}>
-              <Image src="/thumbnails/tropeiro.png" alt="Receita de feijão tropeiro do Família Delivery" width={192} height={85}/>
+              <Image priority={true} src="/thumbnails/tropeiro.png" alt="Receita de feijão tropeiro do Família Delivery" width={192} height={85}/>
             </div>
             <p>Feijão, Farinha, Bacon, Linguiça, Ovos, Couve e Torresmo.</p>
           </div>
@@ -57,7 +57,7 @@ export default function DeliveryMenu() {
           <div className={module.recipe}>
             <h2>Salpicão</h2>
             <div className={module.picture}>
-              <Image src="/thumbnails/salpicao.png" alt="Receita de salpicão do Família Delivery" width={192} height={85}/>
+              <Image priority={true} src="/thumbnails/salpicao.png" alt="Receita de salpicão do Família Delivery" width={192} height={85}/>
             </div>
             <p>Frango desfiado, Maionese, Cenoura, Milho, Uva passa, Azeitona e Batata palha.</p>
           </div>
@@ -81,7 +81,7 @@ export default function DeliveryMenu() {
           <div className={module.recipe}>
             <h2>Arroz Branco</h2>
             <div className={module.picture}>
-              <Image src="/thumbnails/arroz.png" alt="Receita de arroz branco do Família Delivery" width={192} height={85}/>
+              <Image priority={true} src="/thumbnails/arroz.png" alt="Receita de arroz branco do Família Delivery" width={192} height={85}/>
             </div>
             <p>Arroz agulinha Tipo1 cozido ao ponto e soltinho.</p>
           </div>

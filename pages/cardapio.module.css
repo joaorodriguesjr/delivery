@@ -73,6 +73,7 @@
   grid-column: 1;
   position: relative;
   text-align: center;
+  cursor: pointer;
 }
 
 .picture::after {

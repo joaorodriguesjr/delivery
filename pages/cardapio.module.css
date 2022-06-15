@@ -71,6 +71,22 @@
 
 .picture {
   grid-column: 1;
+  position: relative;
+}
+
+.picture::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 12px);
+  height: 24px;
+
+  background: url('/magnify.svg') no-repeat;
+  opacity: 0.85;
 }
 
 .recipe > p {

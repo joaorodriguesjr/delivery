@@ -83,7 +83,7 @@ export default function DeliveryMenu() {
             <div className={module.picture}>
               <Image priority={true} src="/thumbnails/arroz.png" alt="Receita de arroz branco do Família Delivery" width={192} height={85}/>
             </div>
-            <p>Arroz agulinha Tipo1 cozido ao ponto e soltinho.</p>
+            <p>Arroz agulinha Tipo-1 cozido ao ponto e soltinho.</p>
           </div>
 
           <div className={module.portions}>

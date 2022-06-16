@@ -2,26 +2,25 @@ import Image from 'next/image'
 import styles from './lightbox.module.css'
 import { useCallback, useState } from 'react'
 
-export function useLightbox() {
-  const hidden  = `${styles.container} ${styles.hidden }`
-  const visible = `${styles.container} ${styles.visible}`
+function Hidden({ children }) {
+  return <div className={`${styles.container} ${styles.hidden }`}>{children}</div>
+}
 
-  const [ component, setComponent ] = useState(<div className={hidden}></div>)
+export function useLightbox() {
+  const [ component, setComponent ] = useState(<Hidden/>)
 
   const preload = useCallback((images) => {
-    const components = images.map((image, index) => <Image key={index} src={image} priority={true} width={2000} height={884}/>)
-    setComponent(<div className={hidden}>{components}</div>)
+    images = images.map((image, index) => <Image key={index} src={image} priority={true} width={2000} height={884}/>)
+    setComponent(<Hidden>{images}</Hidden>)
   }, [ component ])
 
   const update = useCallback((image) => {
     setComponent(
-      <div className={visible} onClick={() => setComponent(<div className={hidden}></div>)}>
+      <div className={`${styles.container} ${styles.visible }`} onClick={() => setComponent(<Hidden/>)}>
         <Image src={image} priority={true} width={2000} height={884}/>
       </div>
     )
   }, [ component ])
 
-  return {
-    component, preload, update
-  }
+  return { component, preload, update }
 }

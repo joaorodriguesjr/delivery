@@ -2,7 +2,52 @@ import Head from 'next/head'
 import Image from 'next/image'
 import module from './cardapio.module.css'
 
-export default function DeliveryMenu() {
+export function getStaticProps() {
+  return {
+    props: {
+      items: [
+        {
+          recipe: {
+            name: 'Feijão Tropeiro',
+            ingredients: 'Feijão, Farinha, Bacon, Linguiça, Ovos, Couve e Torresmo.',
+            image: '/thumbnails/tropeiro.png',
+            alt: 'Receita de feijão tropeiro do Família Delivery',
+          },
+          servings: [
+            { type: 'Marmitex 500ml', serve: 'Serve até 2 pessoas', price: 'R$20,00' },
+            { type: 'Marmitex 750ml', serve: 'Serve até 4 pessoas', price: 'R$25,00' },
+          ],
+        },
+        {
+          recipe: {
+            name: 'Salpicão',
+            ingredients: 'Frango desfiado, Maionese, Cenoura, Milho, Uva passa, Azeitona e Batata palha.',
+            image: '/thumbnails/salpicao.png',
+            alt: 'Receita de salpicão do Família Delivery'
+          },
+          servings: [
+            { type: 'Marmitex 500ml', serve: 'Serve até 2 pessoas', price: 'R$20,00' },
+            { type: 'Marmitex 750ml', serve: 'Serve até 4 pessoas', price: 'R$25,00' },
+          ],
+        },
+        {
+          recipe: {
+            name: 'Arroz Branco',
+            ingredients: 'Arroz agulinha Tipo-1 cozido ao ponto e soltinho.',
+            image: '/thumbnails/arroz.png',
+            alt: 'Receita de arroz branco do Família Delivery'
+          },
+          servings: [
+            { type: 'Marmitex 500ml', serve: 'Serve até 2 pessoas', price: 'R$15,00' },
+            { type: 'Marmitex 750ml', serve: 'Serve até 4 pessoas', price: 'R$20,00' },
+          ],
+        },
+      ],
+    }
+  }
+}
+
+export default function DeliveryMenu({ items }) {
   return <>
     <Head>
       <title>Cardápio - Família Delivery</title>
@@ -29,77 +74,27 @@ export default function DeliveryMenu() {
       </header>
 
       <main className={module.items}>
-        <div className={module.item}>
-          <div className={module.recipe}>
-            <h2>Feijão Tropeiro</h2>
-            <div className={module.picture}>
-              <Image priority={true} src="/thumbnails/tropeiro.png" alt="Receita de feijão tropeiro do Família Delivery" width={192} height={85}/>
-            </div>
-            <p>Feijão, Farinha, Bacon, Linguiça, Ovos, Couve e Torresmo.</p>
-          </div>
-
-          <div className={module.portions}>
-            <div className={module.portion}>
-              <h3>Marmitex 500ml</h3>
-              <p>Serve até 2 pessoas</p>
-              <p className={module.price}>R$20,00</p>
+        { items.map((item, index) => (
+          <div key={index} className={module.item}>
+            <div className={module.recipe}>
+              <h2>{item.recipe.name}</h2>
+              <div className={module.picture} onClick={() => {}}>
+                <Image priority={true} src={item.recipe.image} alt={item.recipe.alt} width={192} height={85}/>
+              </div>
+              <p>{item.recipe.ingredients}</p>
             </div>
 
-            <div className={module.portion}>
-              <h3>Marmitex 750ml</h3>
-              <p>Serve até 4 pessoas</p>
-              <p className={module.price}>R$25,00</p>
+            <div className={module.portions}>
+              { item.servings.map((serving, index) => (
+                <div key={index} className={module.portion}>
+                  <h3>{serving.type}</h3>
+                  <p>{serving.serve}</p>
+                  <p className={module.price}>{serving.price}</p>
+                </div>
+              )) }
             </div>
           </div>
-        </div>
-
-        <div className={module.item}>
-          <div className={module.recipe}>
-            <h2>Salpicão</h2>
-            <div className={module.picture}>
-              <Image priority={true} src="/thumbnails/salpicao.png" alt="Receita de salpicão do Família Delivery" width={192} height={85}/>
-            </div>
-            <p>Frango desfiado, Maionese, Cenoura, Milho, Uva passa, Azeitona e Batata palha.</p>
-          </div>
-
-          <div className={module.portions}>
-            <div className={module.portion}>
-              <h3>Marmitex 500ml</h3>
-              <p>Serve até 2 pessoas</p>
-              <p className={module.price}>R$20,00</p>
-            </div>
-
-            <div className={module.portion}>
-              <h3>Marmitex 750ml</h3>
-              <p>Serve até 4 pessoas</p>
-              <p className={module.price}>R$25,00</p>
-            </div>
-          </div>
-        </div>
-
-        <div className={module.item}>
-          <div className={module.recipe}>
-            <h2>Arroz Branco</h2>
-            <div className={module.picture}>
-              <Image priority={true} src="/thumbnails/arroz.png" alt="Receita de arroz branco do Família Delivery" width={192} height={85}/>
-            </div>
-            <p>Arroz agulinha Tipo-1 cozido ao ponto e soltinho.</p>
-          </div>
-
-          <div className={module.portions}>
-            <div className={module.portion}>
-              <h3>Marmitex 500ml</h3>
-              <p>Serve até 2 pessoas</p>
-              <p className={module.price}>R$15,00</p>
-            </div>
-
-            <div className={module.portion}>
-              <h3>Marmitex 750ml</h3>
-              <p>Serve até 4 pessoas</p>
-              <p className={module.price}>R$20,00</p>
-            </div>
-          </div>
-        </div>
+        )) }
       </main>
 
       <aside className={module.service}>

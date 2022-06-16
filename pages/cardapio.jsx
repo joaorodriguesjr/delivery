@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import styles from './cardapio.module.css'
 import Item from '../components/cardapio/item'
+import { useLightbox } from '../hooks/lightbox'
+import { useEffect } from 'react'
 
 export function getStaticProps() {
   return {
     props: {
+      preload:[ '/thumbnails/tropeiro.png', '/thumbnails/salpicao.png', '/thumbnails/arroz.png' ],
       items: [
         {
           recipe: {
@@ -47,7 +50,11 @@ export function getStaticProps() {
   }
 }
 
-export default function DeliveryMenu({ items }) {
+export default function DeliveryMenu({ preload, items }) {
+  const lightbox = useLightbox()
+
+  useEffect(() => lightbox.preload(preload), [])
+
   return <>
     <Head>
       <title>Cardápio - Família Delivery</title>
@@ -60,6 +67,7 @@ export default function DeliveryMenu({ items }) {
       <meta property="og:url" content="https://familia.delivery/cardapio"/>
       <meta property="og:image" itemProp="image" content="https://familia.delivery/cardapio-link.png"/>
     </Head>
+    { lightbox.component }
     <div className={styles.container}>
       <header className={styles.header}>
         <img src="/logo.svg" alt="logo Família Delivery" width={125} height={84}/>
@@ -74,7 +82,7 @@ export default function DeliveryMenu({ items }) {
       </header>
 
       <main className={styles.items}>
-        { items.map((item, index) => <Item key={index} item={item}/>) }
+        { items.map((item, index) => <Item key={index} lightbox={lightbox} data={item}/>) }
       </main>
 
       <aside className={styles.service}>

@@ -7,7 +7,7 @@ import { useEffect } from 'react'
 export function getStaticProps() {
   return {
     props: {
-      preload:[ '/thumbnails/tropeiro.png', '/thumbnails/salpicao.png', '/thumbnails/arroz.png' ],
+      images:[ '/thumbnails/tropeiro.png', '/thumbnails/salpicao.png', '/thumbnails/arroz.png' ],
       items: [
         {
           recipe: {
@@ -50,10 +50,10 @@ export function getStaticProps() {
   }
 }
 
-export default function DeliveryMenu({ preload, items }) {
+export default function DeliveryMenu({ images, items }) {
   const lightbox = useLightbox()
 
-  useEffect(() => lightbox.preload(preload), [])
+  useEffect(() => lightbox.preload(images), [])
 
   return <>
     <Head>

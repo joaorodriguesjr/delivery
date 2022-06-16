@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import module from './cardapio.module.css'
+import styles from './cardapio.module.css'
 import Item from '../components/cardapio/item'
 
 export function getStaticProps() {
@@ -60,29 +60,29 @@ export default function DeliveryMenu({ items }) {
       <meta property="og:url" content="https://familia.delivery/cardapio"/>
       <meta property="og:image" itemProp="image" content="https://familia.delivery/cardapio-link.png"/>
     </Head>
-    <div className={module.container}>
-      <header className={module.header}>
+    <div className={styles.container}>
+      <header className={styles.header}>
         <img src="/logo.svg" alt="logo Família Delivery" width={125} height={84}/>
-        <div className={module.separator}></div>
-        <div className={module.header_content}>
+        <div className={styles.separator}></div>
+        <div className={styles.header_content}>
           <h1>Cardápio</h1>
-          <a className={module.action} href="https://wa.me/5531991047243" target='_blank' rel="noreferrer">
+          <a className={styles.action} href="https://wa.me/5531991047243" target='_blank' rel="noreferrer">
             <img src="/whatsapp.svg" width={16} height={16} alt="ícone do whatsapp"/>
             <span>Agendar Pedido</span>
           </a>
         </div>
       </header>
 
-      <main className={module.items}>
+      <main className={styles.items}>
         { items.map((item, index) => <Item key={index} item={item}/>) }
       </main>
 
-      <aside className={module.service}>
+      <aside className={styles.service}>
         <h2>Atendimento</h2>
         <p>
           Serviço aos sábados e domingos das 11:00hs às 14:00hs. Pedidos de segunda à sexta-feira.
         </p>
-        <a className={module.action} href="https://wa.me/5531991047243" target='_blank' rel="noreferrer">
+        <a className={styles.action} href="https://wa.me/5531991047243" target='_blank' rel="noreferrer">
           <img src="/whatsapp.svg" width={16} height={16} alt="ícone do whatsapp"/>
           <span>Agendar Pedido</span>
         </a>

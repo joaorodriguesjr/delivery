@@ -1,0 +1,94 @@
+
+.item {
+  width: 100%;
+  margin: 24px 0;
+}
+
+.recipe {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.recipe > h2 {
+  margin: 8px 0;
+  grid-column: 1 / span 2;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  text-align: center;
+}
+
+.picture {
+  grid-column: 1;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.picture::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 12px);
+  height: 24px;
+
+  background: url('/magnify.svg') no-repeat;
+  opacity: 0.85;
+}
+
+.recipe > p {
+  grid-column: 2;
+  margin: 8px 0;
+  padding: 0 0 0 16px;
+}
+
+.portions {
+  display: flex;
+  flex-direction: row;
+}
+
+.portion {
+  flex: 1;
+  padding: 0 0 0 16px;
+}
+
+.portion  h3 {
+  margin: 4px 0;
+  font-size: 1.0rem;
+}
+
+.portion  p {
+  margin: 4px 0;
+}
+
+.price {
+  padding: 0 32px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #BF4040;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+
+  padding: 32px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.25);
+}

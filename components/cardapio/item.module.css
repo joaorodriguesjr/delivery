@@ -1,5 +1,5 @@
 
-.item {
+.container {
   width: 100%;
   margin: 24px 0;
 }
@@ -47,22 +47,22 @@
   padding: 0 0 0 16px;
 }
 
-.portions {
+.servings {
   display: flex;
   flex-direction: row;
 }
 
-.portion {
+.serving {
   flex: 1;
   padding: 0 0 0 16px;
 }
 
-.portion  h3 {
+.serving  h3 {
   margin: 4px 0;
   font-size: 1.0rem;
 }
 
-.portion  p {
+.serving  p {
   margin: 4px 0;
 }
 

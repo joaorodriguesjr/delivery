@@ -13,3 +13,5 @@ npm run dev
 The code is a Nextjs application that is automatically deployed to the Vercel infrastructure when commits are pushed to the main branch.
 
 https://familia.delivery/cardapio
+
+[<img src="graphics/screenshot.png" width="375"/>](graphics/screenshot.png)

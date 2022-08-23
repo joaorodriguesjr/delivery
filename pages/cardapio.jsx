@@ -29,8 +29,8 @@ export function getStaticProps() {
             alt: 'Receita de salpicão do Família Delivery'
           },
           servings: [
-            { type: 'Marmitex 500ml', serve: 'Serve até 2 pessoas', price: 'R$20,00' },
-            { type: 'Marmitex 750ml', serve: 'Serve até 4 pessoas', price: 'R$25,00' },
+            { type: 'Marmitex 500ml', serve: 'Serve até 2 pessoas', price: 'R$25,00' },
+            { type: 'Marmitex 750ml', serve: 'Serve até 4 pessoas', price: 'R$30,00' },
           ],
         },
         {
